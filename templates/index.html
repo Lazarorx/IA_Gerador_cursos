@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cursos Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Cursos Online</h1>
+
+    <form action="/gerar-cursos" method="post">
+        <label for="topicos">Digite os Tópicos dos Cursos (um por linha):</label>
+        <textarea id="topicos" name="topicos" required></textarea>
+
+        <label for="numero_cursos">Número de Cursos a Gerar:</label>
+        <input type="number" id="numero_cursos" name="numero_cursos" value="3" min="1">
+
+        <button type="submit">Gerar Cursos</button>
+    </form>
+</body>
+</html>
